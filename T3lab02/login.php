@@ -1,3 +1,9 @@
+<?php
+    $error="";
+    if(isset($_GET["error"])){
+        $error=$_GET["error"];
+    }
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -14,7 +20,8 @@
             <div class="col p-3">
                 <h3>Login</h3>
                 <!-- -->
-                <form action="loginuser.php" method="POST">
+                <h4><?=$error?></h4>
+                <form action="loginuser.php" method="POST" name="login">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
